@@ -1,2 +1,5 @@
-# MedSafe-AI
-AI-driven medical safety assistant
+# MedSafe-AI-AI-driven medical safety assistant
+
+MedSafe AI is an intelligent, AI-powered healthcare assistance platform designed to enhance medicine safety awareness, symptom understanding, and early risk identification through a unified web-based system. Built using Streamlit, Optical Character Recognition (OCR), fuzzy matching algorithms, curated medical databases, and large language models (LLMs), the platform assists users in safely navigating medication usage and basic health concerns in an educational, non-diagnostic manner.
+MedSafe AI streamlines multiple healthcare safety workflows by enabling users to check potential drug–drug interactions, extract medicines and active salts from prescription images, receive symptom-based guidance, log post-medication experiences, and assess emergency risk levels. By combining OCR-based prescription analysis, intelligent medicine name matching, rule-based risk scoring, and AI-generated explanations, the system delivers structured, transparent, and user-friendly safety insights.
+Through the integration of computer vision, natural language processing, fuzzy logic, and generative AI, MedSafe AI provides a reliable environment for medicine awareness, preventive health education, and early warning support. The platform is particularly valuable for patients, caregivers, and health-tech researchers seeking accessible tools for medication safety monitoring, symptom clarification, and risk-aware decision support without replacing professional medical consultation.
