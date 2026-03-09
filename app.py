@@ -3,6 +3,9 @@ Main Integration Entry for MedSafe AI
 """
 
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
 from symptom import SymptomChecker
 from risk_engine import RiskAssessment
 from side_effects import SideEffectAnalyzer
@@ -137,13 +140,40 @@ def main():
 
         # ---------- Emergency Assessment ----------
         st.subheader("Emergency Assessment")
-
         st.write(risk_assessment)
 
         # ---------- AI Explanation ----------
         st.subheader("Educational Explanation")
-
         st.write(ai_help)
+
+        # =================================================
+        # MEDICINE SAFETY DATA + VISUALIZATION (MERGED PART)
+        # =================================================
+
+        st.divider()
+        st.header("Medicine Safety Analysis")
+
+        data = {
+            "Medicine": ["Paracetamol", "Ibuprofen", "Aspirin"],
+            "Safety Score": [85, 70, 60]
+        }
+
+        df = pd.DataFrame(data)
+
+        st.subheader("Safety Data")
+        st.write(df)
+
+        st.subheader("Safety Score Visualization")
+
+        fig, ax = plt.subplots()
+
+        ax.bar(df["Medicine"], df["Safety Score"])
+
+        ax.set_xlabel("Medicine")
+        ax.set_ylabel("Safety Score")
+        ax.set_title("Medicine Safety Analysis")
+
+        st.pyplot(fig)
 
         log_event("Analysis completed successfully")
 
